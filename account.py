@@ -1,5 +1,3 @@
-from abc import ABC, abstractmethod
-
 class BankAccount:
     def __init__(self, account_number, username, pin) :
         self.account_number = account_number
@@ -58,7 +56,7 @@ class BankAccount:
         if(self.verify_pin(old_pin)):
             self._pin = new_pin
             print("PIN changed successfully")
-            self.add_transcation("PIN changed")
+            self.add_transaction("PIN changed")
         else: 
             print("Wrong PIN entered")
             
@@ -68,13 +66,5 @@ class BankAccount:
         # print(f"Account Balance: {self._balance}")
         
     
-if __name__ == "__main__":  
-    acc1 = BankAccount(101, "Tinku", 5000, "1234",[])
-    
-    # acc1.account_details()
-    # acc1.deposit(1500)
-    # acc1.withdraw(500, "1234")
-    # acc1.check_balance("1234")
-    # acc1.change_pin("1234", "5678")
-    # acc1.check_balance("5678")
-    
+if __name__ == "__main__":
+    pass
