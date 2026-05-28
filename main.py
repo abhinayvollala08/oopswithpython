@@ -18,7 +18,10 @@ while True:
         bank.create_account(account_number, username, pin)
     elif choice == "2":
         account_number = int(input("Enter account number: "))
-        amount = float(input("Enter Amount: "))
+        try :
+            amount = float(input("Enter Amount: "))
+        except ValueError:
+            print("Invalid amount")
         # pin = input("Enter PIN: ")
         bank.deposit_to_account(account_number, amount)
     elif choice == "3":

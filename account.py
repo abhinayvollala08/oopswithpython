@@ -2,8 +2,8 @@ class BankAccount:
     def __init__(self, account_number, username, pin) :
         self.account_number = account_number
         self.username = username
-        self._balance = 0
-        self._pin = pin
+        self.__balance = 0
+        self.__pin = pin
         self.transactions = []
         self.transactions.append("Account Created")
     
